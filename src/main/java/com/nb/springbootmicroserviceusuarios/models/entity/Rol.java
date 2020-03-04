@@ -2,6 +2,7 @@ package com.nb.springbootmicroserviceusuarios.models.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "roles")
@@ -15,6 +16,7 @@ public class Rol implements Serializable {
 
     @Column(unique = true, length = 30)
     private String nombre;
+    
 
     public Long getId() {
         return id;

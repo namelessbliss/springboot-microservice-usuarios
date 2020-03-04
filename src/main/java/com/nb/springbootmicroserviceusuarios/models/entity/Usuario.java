@@ -2,6 +2,7 @@ package com.nb.springbootmicroserviceusuarios.models.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "usuarios")
@@ -27,6 +28,20 @@ public class Usuario implements Serializable {
 
     @Column(unique = true, length = 100)
     private String email;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "usuarios_to_roles", joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "rol_id"),
+            uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "rol_id"})})
+    private List<Rol> roles;
+
+    public List<Rol> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Rol> roles) {
+        this.roles = roles;
+    }
 
     public Long getId() {
         return id;
