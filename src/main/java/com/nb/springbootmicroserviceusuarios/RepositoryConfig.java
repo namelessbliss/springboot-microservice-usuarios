@@ -1,7 +1,7 @@
 package com.nb.springbootmicroserviceusuarios;
 
-import com.nb.springbootmicroserviceusuarios.models.entity.Rol;
-import com.nb.springbootmicroserviceusuarios.models.entity.Usuario;
+import com.nb.springbootmicroserviceusuarioscommons.models.entity.Rol;
+import com.nb.springbootmicroserviceusuarioscommons.models.entity.Usuario;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;

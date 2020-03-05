@@ -1,6 +1,6 @@
 package com.nb.springbootmicroserviceusuarios.models.dao;
 
-import com.nb.springbootmicroserviceusuarios.models.entity.Usuario;
+import com.nb.springbootmicroserviceusuarioscommons.models.entity.Usuario;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
