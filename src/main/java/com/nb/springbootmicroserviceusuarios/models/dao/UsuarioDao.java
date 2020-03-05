@@ -3,7 +3,9 @@ package com.nb.springbootmicroserviceusuarios.models.dao;
 import com.nb.springbootmicroserviceusuarios.models.entity.Usuario;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+@RepositoryRestResource(path = "usuarios")
 public interface UsuarioDao extends PagingAndSortingRepository<Usuario, Long> {
 
     public Usuario findByUsername(String username);
